@@ -1,8 +1,19 @@
-name: Markdown Sample
+name: Tanzu Build Service Overview
 
 modules:
     activate:
-    - workshop-overview
-    - setup-environment
-    - exercises/01-sample-content
-    - workshop-summary
+    - tbs-gitops-setup
+    - exercises/01-frameworks
+    - exercises/02-tbs-ci
+    - exercises/03-tbs-harbor
+    - exercises/04-tbs-tac
+    - exercises/gitops-cd
+    - exercises/gitops-config
+    - exercises/05-cluster-management
+    - exercises/06-webdb-observability
+    - exercises/07-tbs-tsm
+    vars:
+    - name: user_token
+      value: FOO
+    - name: harbor_project_id
+      value: "9999"
