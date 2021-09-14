@@ -1,12 +1,30 @@
 modules:
-    workshop-overview:
-        name: Workshop Overview
-        exit_sign: Setup Environment
-    setup-environment:
-        name: Setup Environment
-        exit_sign: Start Workshop
-    exercises/01-sample-content:
-        name: Sample Content
-    workshop-summary:
-        name: Workshop Summary
-        exit_sign: Finish Workshop
+  tbs-gitops-setup:
+    name: Set up environment
+    exit_sign: Frameworks and Services
+  exercises/01-frameworks:
+    name: Frameworks and Services
+    exit_sign: Automated Container Creation
+  exercises/02-tbs-ci:
+    name: Automated Container Creation
+    exit_sign: Registries are More than File Servers
+  exercises/03-tbs-harbor:
+    name: Registries are More than File Servers
+    exit_sign: Service Catalog
+  exercises/04-tbs-tac:
+    name: Service Catalog
+    exit_sign: Continuous Delivery
+  exercises/gitops-cd:
+    name: Continuous Delivery
+    exit_sign: Deployment Iteration
+  exercises/gitops-config:
+    name: Deployment Iteration
+    exit_sign: Centralized Cluster Management
+  exercises/05-cluster-management:
+    name: Centralized Cluster Management
+    exit_sign: Enterprise Observability
+  exercises/06-webdb-observability:
+    name: Enterprise Observability
+    exit_sign: Cross-Cloud Global Namespaces
+  exercises/07-tbs-tsm:
+    name: Cross-Cloud Global Namespaces
