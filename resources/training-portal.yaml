@@ -1,7 +1,7 @@
 apiVersion: training.eduk8s.io/v1alpha1
 kind: TrainingPortal
 metadata:
-  name: tanzu-build-service-overiew
+  name: tanzu-build-service-overview
 spec:
   portal:
     registration:
