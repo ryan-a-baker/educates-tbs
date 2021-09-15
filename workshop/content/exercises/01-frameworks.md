@@ -1,4 +1,4 @@
-You want your developers to create resilient applications that are easy to operate and can scale to meet demand. We're going to start our story with Cody. He's not a deep expert on container infrastructure, but he's an absolute star in writing business applications using popular languages and frameworks.
+We're going to start our story with Cody. but he's an absolute star in writing business applications using popular languages and frameworks, but he's not a deep expert on container infrastructure.
 
 ![Cody Languages](images/cody-languages.png)
 
