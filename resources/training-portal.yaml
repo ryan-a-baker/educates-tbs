@@ -9,7 +9,7 @@ spec:
     updates:
       workshop: true
   workshops:
-  - name: tanzu-build-service-overiew
+  - name: tanzu-build-service-overview
     capacity: 1
     expires: 60m
     orphaned: 5m
