@@ -1,6 +1,8 @@
-Welcome to the Tanzu End to End demo!  In this session, we'll be exploring the capabilitites of Tanzu Advanced Edition, and see how they would be used in an actual software lifecycle scenario.
+Welcome to the overview on the Tanzu Build Service! In this workshop, we'll explore how the Tanzu Build Service can produce OCI Compliant container images from source code in a repeatable, scalable, and secure manner.  
 
-We're going to be using Tanzu to deploy an application, deploy dependent services for that application, observe the metrics for that application and supporting infrastructure, and manage the cluster hosting that application.
+We're going to take a sample application, use the Tanzu Build Service to build a container, deploy it, update it, and finally, patch it.
+
+In order to successfully complete this workshop, we'll need the following resources available.
 
 ## Harbor
 
@@ -10,3 +12,4 @@ Use the following link to sign into the Harbor Web UI with the username "admin" 
 name: Harbor
 url: https://harbor-demo.{{ ingress_domain }}/harbor/projects/{{ harbor_project_id }}/repositories
 ```
+TODO: Fix this link when I know the real link location
