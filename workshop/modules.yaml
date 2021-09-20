@@ -5,10 +5,10 @@ modules:
   exercises/01-frameworks:
     name: Frameworks and Services
     exit_sign: Automated Container Creation
-  exercises/02-tbs-ci:
-    name: Automated Container Creation
-    exit_sign: Registries are More than File Servers
-  exercises/03-tbs-harbor:
+  exercises/02-tbs-create-image:
+    name: Creating the Image
+    exit_sign: Viewing the Build Logs
+  exercises/03-tbs-build-logs:
     name: Registries are More than File Servers
     exit_sign: Service Catalog
   exercises/04-tbs-tac:
