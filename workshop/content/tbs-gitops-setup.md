@@ -12,4 +12,4 @@ Use the following link to sign into the Harbor Web UI with the username "admin" 
 name: Harbor
 url: https://harbor-demo.{{ ingress_domain }}/harbor/projects/{{ harbor_project_id }}/repositories
 ```
-TODO: Fix this link when I know the real link location
+TODO: Fix this link when I know the real link location.  Insert the "harbor project id"
