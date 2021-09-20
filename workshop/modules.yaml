@@ -11,20 +11,3 @@ modules:
   exercises/03-tbs-build-logs:
     name: Registries are More than File Servers
     exit_sign: Service Catalog
-  exercises/04-tbs-tac:
-    name: Service Catalog
-    exit_sign: Continuous Delivery
-  exercises/gitops-cd:
-    name: Continuous Delivery
-    exit_sign: Deployment Iteration
-  exercises/gitops-config:
-    name: Deployment Iteration
-    exit_sign: Centralized Cluster Management
-  exercises/05-cluster-management:
-    name: Centralized Cluster Management
-    exit_sign: Enterprise Observability
-  exercises/06-webdb-observability:
-    name: Enterprise Observability
-    exit_sign: Cross-Cloud Global Namespaces
-  exercises/07-tbs-tsm:
-    name: Cross-Cloud Global Namespaces
