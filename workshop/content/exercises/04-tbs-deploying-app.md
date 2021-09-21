@@ -20,7 +20,25 @@ name: Spring Pet Clinic
 url: http://localhost:8080
 ```
 
+
 ```dashboard:create-dashboard
-name: Harbor
-url: https://harbor-demo.{{ ingress_domain }}/harbor/projects/{{ harbor_project_id }}/repositories
+name: Spring Pet Clinic
+url: http://localhost:8080
+```
+
+
+```dashboard:create-dashboard
+name: Spring Pet Clinic
+url: http://localhost:8080
+```
+
+
+```dashboard:create-dashboard
+name: Spring Pet Clinic
+url: http://localhost:8080
+```
+
+```dashboard:create-dashboard
+name: Spring Pet Clinic
+url: http://localhost:8080
 ```
