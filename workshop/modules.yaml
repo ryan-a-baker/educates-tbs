@@ -10,4 +10,7 @@ modules:
     exit_sign: Understanding the Build Process
   exercises/03-tbs-build-logs:
     name: Understanding the Build Process
+    exit_sign: Deploying the Application
+  exercises/04-tbs-deploying-app:
+    name: Deploying the Application
     exit_sign: Updating the Application

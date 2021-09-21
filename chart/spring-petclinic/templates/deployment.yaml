@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: spring-petclinic
-        image: "{{ .Values.image.repository }}@{{ .Values.image.tag }}"
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
         - containerPort: 8080
