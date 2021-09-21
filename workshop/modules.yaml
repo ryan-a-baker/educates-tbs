@@ -1,13 +1,13 @@
 modules:
   tbs-gitops-setup:
     name: Set up environment
-    exit_sign: Frameworks and Services
+    exit_sign: Workshop Introduction
   exercises/01-frameworks:
-    name: Introduction
+    name: Workshop Introduction
     exit_sign: Automated Container Creation
   exercises/02-tbs-create-image:
-    name: Creating the Image
-    exit_sign: Viewing the Build Logs
+    name: Creating an Image
+    exit_sign: Understanding the Build Process
   exercises/03-tbs-build-logs:
-    name: Registries are More than File Servers
-    exit_sign: Service Catalog
+    name: Understanding the Build Process
+    exit_sign: Updating the Application
