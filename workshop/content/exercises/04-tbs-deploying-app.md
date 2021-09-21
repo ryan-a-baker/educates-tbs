@@ -2,7 +2,7 @@ Now that Cody has built the container for the Spring Pet Clinic, Alana is going 
 
 
 ```terminal:execute
-command: helm upgrade --install --wait spring-petclinic chart/spring-petclinic
+command: helm upgrade --install --wait spring-petclinic chart/spring-petclinic --set values.url=spring-petclinic.{{ ingress_domain }}
 session: 1
 ```
 
