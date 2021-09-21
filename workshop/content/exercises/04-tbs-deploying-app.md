@@ -15,7 +15,7 @@ session: 2
 
 Once that is complete, let's open the application to view it.
 
-```dashboard:open-url
+```dashboard:create-dashboard
 name: Spring Pet Clinic
 url: http://localhost:8080
 ```
