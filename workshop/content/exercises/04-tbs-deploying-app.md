@@ -9,13 +9,18 @@ session: 1
 This will deploy a simple pod and service.  In order to view the web application, let's use port forwarding to be able to connect to the private kubernetes IP.
 
 ```terminal:execute
-kubectl port-forward service/spring-petclinic 8080:80
+command: kubectl port-forward service/spring-petclinic 8080:80
 session: 2
 ```
 
 Once that is complete, let's open the application to view it.
 
-
 ```dashboard:open-url
+name: Spring Pet Clinic
 url: http://localhost:8080
+```
+
+```dashboard:create-dashboard
+name: Harbor
+url: https://harbor-demo.{{ ingress_domain }}/harbor/projects/{{ harbor_project_id }}/repositories
 ```
