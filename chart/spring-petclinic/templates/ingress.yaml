@@ -12,3 +12,4 @@ spec:
             name: spring-petclinic
             port:
               number: 80
+        pathType: ImplementationSpecific
