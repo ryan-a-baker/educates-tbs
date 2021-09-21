@@ -4,6 +4,8 @@
 
 replicaCount: 1
 
+url: test.com
+
 image:
   repository: harbor-demo.ryanbaker.io/demo-tbs/spring-petclinic
   pullPolicy: Always
