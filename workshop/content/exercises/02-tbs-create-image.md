@@ -29,6 +29,4 @@ command: kp image create spring-petclinic -c demo-cluster-builder --tag harbor-d
 session: 1
 ```
 
-TODO: Update Harbor link with correct link later
-
 Next, we'll look at the logs of the build and understand the different phases.
