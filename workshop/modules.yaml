@@ -14,3 +14,12 @@ modules:
   exercises/04-tbs-deploying-app:
     name: Deploying the Application
     exit_sign: Updating the Application
+  exercises/05-tbs-update-app:
+    name: Updating the Application
+    exit_sign: Exploring Harbor
+  exercises/06-tbs-harbor:
+    name: Exploring Harbor
+    exit_sign: Patching the Image
+  exercises/07-tbs-patching-os:
+    name: Patching the Image
+    exit_sign: Done

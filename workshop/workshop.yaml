@@ -7,6 +7,9 @@ modules:
     - exercises/02-tbs-create-image
     - exercises/03-tbs-build-logs
     - exercises/04-tbs-deploying-app
+    - exercises/05-tbs-update-app
+    - exercises/06-tbs-harbor
+    - exercises/07-tbs-patching-os
     vars:
     - name: user_token
       value: FOO

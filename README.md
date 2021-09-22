@@ -78,3 +78,9 @@ docker pull registry.pivotal.io/tbs-dependencies/run-base@sha256:891d87e0380f061
 kp clusterstack create demo-stack --build-image harbor-demo.ryanbaker.io/educates-tbs/tbs/build@sha256:82c6a2e1a16217418be6c08bdbccdf7bfb22ddf2f09340bf2a7eb0e55359182c --run-image harbor-demo.ryanbaker.io/educates-tbs/tbs/run@sha256:47481aa496959d425f4a7d306875c0e17babe3981cc98a406b177f1491e5a27d
 kp clusterstack update demo-stack --build-image registry.pivotal.io/tanzu-base-bionic-stack/build:1.0.12-base-cnb --run-image registry.pivotal.io/tanzu-base-bionic-stack/run:1.0.12-base-cnb
 kp clusterbuilder create demo-cluster-builder --order ./full-order-100.0.18.yaml --stack demo-stack --store default
+
+
+Create Synced Secret:
+```
+k apply -f secret.yaml -n build-service
+```

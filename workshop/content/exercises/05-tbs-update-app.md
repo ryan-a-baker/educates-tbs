@@ -5,7 +5,7 @@ Let's take a look at how the Tanzu Build Service can build a new container image
 Let's update our image definition to point to the new tag and observe the build to see what differences we observe.
 
 ```terminal:execute
-command: kp image save spring-petclinic-1 --git-revision 1.0.1
+command: kp image save spring-petclinic --git-revision 1.0.1
 session: 1
 ```
 
@@ -25,4 +25,3 @@ As you can see by looking that the logs, the Tanzu Build Service recognizes Cody
 Notice that in the detect and analyze phase, no action is taken.  This is because this is an initial image creation, and there are not yet any cached layers that can be reused.  We'll see how this would work in a later module.
 
 Watch the logs until the build completes and the image is pushed to our Harbor container registry.  On intial build, this could take 10-15 minutes.
-
