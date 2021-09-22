@@ -1,11 +1,17 @@
-A **build** will be triggered when an image is created, when the application's source code is updated, our when one of the underlying resources is updated (stack or buildpack for example).  Since we just triggered a build, use this command to view the build logs and understand the process an image build goes through.
+Cody is excited that the Spring Pet Clinic is up and running in production so quickly and easily!  However, a request has come in to make the welcome message more "welcoming" to the user.
+
+Let's take a look at how the Tanzu Build Service can build a new container image when a code update is made.  Cody has notified Alana that he has updated the welcome message from "Welcome!" to "Welcome to the Spring Pet Clinic" and created a tag for the `1.0.1` version.
+
+Let's update our image definition to point to the new tag and observe the build to see what differences we observe.
 
 ```terminal:execute
-command: kp build logs spring-petclinic
+command: kp image save spring-petclinic-1 --git-revision 1.0.1
 session: 1
 ```
 
-The build will go through 6 phases on an initial build:
+Keep in mind, if we would have used a branch as our `git-revision`, the Tanzu Build Service would automatically detect a commit and trigger a build.  However, in order to keep the external dependencies to a minumum and not require a GitHub account for this workshop, we used a tag to build the initial application.  This could also easily be done as part of CI/CD pipeline.  An example of doing so is outlined in [documentation](https://docs.pivotal.io/build-service/1-2/tbs-in-ci.html).
+
+This time, the build will go through 6 phases on an initial build:
 
 1. **Prepare**: This is where TBS identifies that a change was made, loads any secrets (for the registry to push as well as any source code location secrets), and downloads the source code for image creation.
 2. **Detect**: TBS executes all of the available build packs against the source code, looking for signatures in the source from the build packs to determine if the build pack should be executed. 
