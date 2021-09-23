@@ -1,1 +1,3 @@
-This is the last page of the workshop. Include in this page a summary of the workshop and any links to resources relevant to the workshop. This ensures anyone doing the workshop has material they can research later to learn more.
+You have completed the overview of the Tanzu Build Service!  In it, you discovered how the Tanzu Build service uses the open-source Cloud Native Buildpacks project to turn application source code into container images in a repeatable, secure, and scalable way. In addition to initial creation, you discovered how the Tanzu Build Service keeps images up-to-date to help alleviate the day 2 operational strain of application, operating system, and best practice updates.
+
+Thank you for completing the workshop!  If you are interesting in more information, please visit the [Tanzu Build Service page](https://tanzu.vmware.com/build-service).

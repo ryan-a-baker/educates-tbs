@@ -30,7 +30,7 @@ name: Spring Pet Clinic
 url: http://spring-petclinic.{{ session_namespace }}.{{ ingress_domain }}
 ```
 
- Please note that the ingress is creating a DNS record, which may take a few minutes to propagate.  You may need to reload the dashboard if the DNS record was not yet available.
+Note that the ingress is creating a DNS record, which may take a few minutes to propagate.  You may need to reload the dashboard if the DNS record was not yet available.
 
 ```dashboard:reload-dashboard
 name: Spring Pet Clinic

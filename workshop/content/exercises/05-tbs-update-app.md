@@ -9,7 +9,7 @@ command: kp image save spring-petclinic --git-revision 1.0.1
 session: 1
 ```
 
-Keep in mind, if we would have used a branch as our `git-revision`, the Tanzu Build Service would automatically detect a commit and trigger a build.  However, in order to keep the external dependencies to a minumum and not require a GitHub account for this workshop, we used a tag to build the initial application.  This could also easily be done as part of CI/CD pipeline.  An example of doing so is outlined in [documentation](https://docs.pivotal.io/build-service/1-2/tbs-in-ci.html).
+Keep in mind, if we would have used a branch as our **git-revision**, the Tanzu Build Service would automatically detect a commit and trigger a build.  However, in order to keep the external dependencies to a minumum and not require a GitHub account for this workshop, we used a tag to build the initial application.  While we are doing this manually, this could also easily be done as part of CI/CD pipeline.  An example of doing so is outlined in [documentation](https://docs.pivotal.io/build-service/1-2/tbs-in-ci.html).
 
 Now that we've updated the revision to `1.0.1`, let's look at the build logs and compare the differences:
 
@@ -18,9 +18,9 @@ command: kp build logs spring-petclinic
 session: 1
 ```
 
-This time, the build will go through all six phases again.  However, we'll notice that during the Analyze and Restore phases, action will be taken instead of skipped.  This is because the Tanzu Build Service has identified that there are layers of the image that have not been impacted by the code changes, and therefore, do not need to rebuilt.  In order to save time and resources, the Tanzu Build Service will instead use these layers from cache.  You should notice that the build time should drop to only a couple minutes instead of the original 10-15 minutes.
+This time, the build will go through all six phases again.  However, we'll notice that during the **Analyze** and **Restore** phases, action will be taken instead of skipped.  This is because the Tanzu Build Service has identified that there are layers of the image that have not been impacted by the code changes, and therefore, do not need to be rebuilt.  In order to save time and resources, the Tanzu Build Service will instead use these layers from cache.  Consequentially, you will notice that the build time drops to only a couple minutes instead of the original 10-15 minutes.
 
-Once the image has finished building successfully, let's restart the application.  Since the image pull policy was set to "Always" on the deployment configuration, the latest image will be pulled from Harbor, and we should see our changes. pod so that the latest image will be pulled.
+Once the image has finished building successfully, let's restart the application.  Since the image pull policy was set to "always" on the deployment configuration, and the image tag was set to "latest", we can delete the application pod and force Kubernetes to download the latest container image.
 
 ```terminal:execute
 command: kubectl delete pod -l app=spring-petclinic
