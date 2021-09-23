@@ -23,9 +23,16 @@ command: kubectl get ingress
 session: 1
 ```
 
-Once that is complete, let's open the Spring Pet Clinic application to view it.  Please note that the ingress is creating a DNS record, which may take up to 5 minutes to propagate.
+Once that is complete, let's open the Spring Pet Clinic application to view it. 
 
 ```dashboard:create-dashboard
+name: Spring Pet Clinic
+url: http://spring-petclinic.{{ session_namespace }}.{{ ingress_domain }}
+```
+
+ Please note that the ingress is creating a DNS record, which may take up to 5 minutes to propagate.  You may need to reload the dashboard if the DNS record was not yet available.
+
+```dashboard:reload-dashboard
 name: Spring Pet Clinic
 url: http://spring-petclinic.{{ session_namespace }}.{{ ingress_domain }}
 ```
