@@ -24,5 +24,7 @@ Once the image has finished building successfully, let's restart the application
 
 ```terminal:execute
 command: kubectl delete pod -l app=spring-petclinic
-session:1
+session: 1
 ```
+
+Once the pod returns to a running state, tbe welcome message should be updated to "Welcome to the Spring Pet Clinic!"

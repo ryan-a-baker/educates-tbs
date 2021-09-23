@@ -6,10 +6,20 @@ command: helm upgrade --install --wait spring-petclinic chart/spring-petclinic -
 session: 1
 ```
 
-This will deploy a simple pod, a service, and an ingress.
+This will deploy a simple pod, a service, and an ingress.  We can take a look at all of the resources that are part of the application:
+
+```terminal:execute
+command: kubectl get pods
+session: 1
+```
 
 ```terminal:execute
 command: kubectl get services
+session: 1
+```
+
+```terminal:execute
+command: kubectl get ingress
 session: 1
 ```
 
