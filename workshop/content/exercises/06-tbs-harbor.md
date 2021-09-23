@@ -7,6 +7,11 @@ name: Harbor
 url: https://harbor.{{ ingress_domain }}/harbor/projects/{{ harbor_project_id }}/repositories
 ```
 
+```dashboard:reload-dashboard
+name: Harbor
+url: https://harbor-demo.{{ ingress_domain }}/harbor/projects/73/repositories
+```
+
 We can see that Tanzu Build Service has created multiple container images for the Spring Pet Clinic builds. Click on the image name.
 
 Surprise!  When we built the initial Spring Pet Clinic images, we were intintially using an outdated base operating system that has vulnerabilities on it.
