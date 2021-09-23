@@ -27,4 +27,9 @@ command: kubectl delete pod -l app=spring-petclinic
 session: 1
 ```
 
-Once the pod returns to a running state, tbe welcome message should be updated to "Welcome to the Spring Pet Clinic!"
+Once the pod returns to a running state, the welcome message should be updated to "Welcome to the Spring Pet Clinic!"  Let's reload the application to see the changes.
+
+```dashboard:reload-dashboard
+name: Spring Pet Clinic
+url: http://spring-petclinic.{{ session_namespace }}.{{ ingress_domain }}
+```
