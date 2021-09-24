@@ -1,7 +1,0 @@
-{
-        "auths": {
-                "harbor-demo.ryanbaker.io": {
-                        "auth": "YWRtaW46ckNIb3ZlQWRaeXFaRG9uSTFuRzk="
-                }
-        }
-}

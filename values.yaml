@@ -1,0 +1,4 @@
+#@data/values
+harbor:
+  adminPassword: Harbor12345
+  diskSize: 50Gi
