@@ -1,4 +1,11 @@
 #@data/values
+---
+ingress:
+  domain: ryanbaker.io
 harbor:
   adminPassword: Harbor12345
   diskSize: 50Gi
+psp:
+  cluster_role:
+registry:
+  dockerhub: docker.io
