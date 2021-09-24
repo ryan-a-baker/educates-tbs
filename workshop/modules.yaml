@@ -22,4 +22,7 @@ modules:
     exit_sign: Patching the Image
   exercises/07-tbs-patching-os:
     name: Patching the Image
-    exit_sign: Done
+    exit_sign: Summary
+  workshop-summary:
+        name: Workshop Summary
+        exit_sign: Finish Workshop
