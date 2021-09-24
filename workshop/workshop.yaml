@@ -10,6 +10,7 @@ modules:
     - exercises/05-tbs-update-app
     - exercises/06-tbs-harbor
     - exercises/07-tbs-patching-os
+    - workshop-summary
     vars:
     - name: user_token
       value: FOO
