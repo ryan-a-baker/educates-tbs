@@ -6,9 +6,7 @@ This can be done manually, or automatically as part of the [depenency updater](h
 command: kp image patch spring-petclinic --cluster-builder base
 session: 1
 ```
-
-As that runs, let's inpsect the logs to see what it's doing.
-
+As that runs, let's inspect the logs to see what it's doing.
 
 ```terminal:execute
 command: kp build logs spring-petclinic
@@ -17,6 +15,6 @@ session: 1
 
 You'll notice that this build happens very quickly, and the only step is a "rebase".  That is because the Tanzu Build Service detected that this was just a switch in the stack, and the rebase simply updated the app image’s layer metadata to reference the newer base image version.
 
-Now, we can re-inspect the image in Harbor - to ensure the vulnerabilities have been reduced.  
+Now, we can re-inspect the image in Harbor to ensure the vulnerabilities have been reduced.  
 
 As a DevOps engineer, this frees Alana from the tedius task of identifying a vulnerability, locating the dockerfile used to build an image, updating the dockerfile, rebuilding the image,and pushing it to the container registry.  While this demonstrated this workflow in singularity, Alana saves a significant amount of time when the Tanzu Build Service does this across her enteprise's entire container library automatically.  When teamed with the automated dependency updater, Alana, with very little effort, can ensure all images are constantly updated to mitigate the latest vulnerabilities and adhere to newly adapted best practices for all her container runtimes!
