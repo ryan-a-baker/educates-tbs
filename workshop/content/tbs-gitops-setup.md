@@ -13,7 +13,7 @@ url: https://harbor.{{ ingress_domain }}/harbor/projects/{{ harbor_project_id }}
 
 The Tanzu build service has several resources that will be discussed during this workshop that work together to produce container images.  Before getting started, it may help to review the diagram and terms of these resources for background information.
 
-![TBS Resources](images/tbs-resources.png)
+![TBS Resources](exercises/images/tbs-resources.png)
 
 **Image**: Defines the source of the application, build time environment and registry destination. This source code could reside in git, a blobstore, or as code on a workstation.
 
