@@ -25,7 +25,7 @@ As perviously discussed, Cody is storying the source code for the Spring Pet Cli
 In order to keep the external dependencies simple and prevent the requirement of a GitHub account for this workshop, we're going to use the `1.0.0` tag that was already created for the Spring Pet Clinic.  
 
 ```terminal:execute
-command: kp image create spring-petclinic -c demo-cluster-builder --tag harbor-demo.{{ ingress_domain }}/{{ session_namespace }}/spring-petclinic --git https://github.com/ryan-a-baker/spring-petclinic.git --git-revision 1.0.0
+command: kp image create spring-petclinic -c demo-cluster-builder --tag harbor.{{ ingress_domain }}/{{ session_namespace }}/spring-petclinic --git https://github.com/ryan-a-baker/spring-petclinic.git --git-revision 1.0.0
 session: 1
 ```
 
