@@ -1,5 +1,4 @@
-Now that Cody has built the container for the Spring Pet Clinic, Alana is going to deploy the application.  She does this using a helm chart, setting environment specific values such as the image location and url:
-
+Now that Cody has built the container for the Spring Pet Clinic, Alana is going to deploy the application.  She does this using a helm chart and setting environment specific values such as the image location and url:
 
 ```terminal:execute
 command: helm upgrade --install --wait spring-petclinic chart/spring-petclinic --set image.repository=harbor.{{ ingress_domain }}/{{ session_namespace }}/spring-petclinic --set url=spring-petclinic.{{ session_namespace }}.{{ ingress_domain }}
