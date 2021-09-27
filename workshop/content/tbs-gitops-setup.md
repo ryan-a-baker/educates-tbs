@@ -24,6 +24,3 @@ The Tanzu build service has several resources that will be discussed during this
 **ClusterStore**: ClusterStore serves as a repository for Cloud Native Buildpacks available for use in Builders. One can populate a store with Buildpacks they create and package.
 
 **ClusterStack**: A ClusterStack defines a pair of build and run OS images. Critical security vulnerabilities are addressed by building apps on the most up-to date stack. The stacks used by Build Service to build applications are referenced in the Builders.
-
-A visual representation will help understand how all the resources work together for the Tanzu Build Service.
-

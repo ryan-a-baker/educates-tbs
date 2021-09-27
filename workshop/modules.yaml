@@ -1,6 +1,6 @@
 modules:
   tbs-gitops-setup:
-    name: Set up environment
+    name: Tanzu Build Service Introduction
     exit_sign: Workshop Introduction
   exercises/01-frameworks:
     name: Workshop Introduction
