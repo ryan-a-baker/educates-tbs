@@ -24,7 +24,7 @@ spec:
         verbs: [ list, watch, get ]
   session:
     env:
-      - name: HARBOR_PASSWORD
+      - name: ENV_HARBOR_PASSWORD
         value: changeme
   content:
     files: github.com/ryan-a-baker/educates-tbs
