@@ -12,15 +12,15 @@ Let's see how this works. With Tanzu Build Service, we will create an **image**.
 
 When you create an image with TBS, you have a few options on where the source code can be referenced:
 
-1.  A Git repository such as GitHub, GitLab, Azure Repos, etc.
-1.  A blob storage such as S3 if a CI pipeline (or other means) is building the artifact
-1.  Local file system, in the event that your artificat is produced locally
+1.  **Git repository** such as GitHub, GitLab, Azure Repos, etc.
+1.  **Blob storage** such as S3 if a CI pipeline (or other means) is building the artifact
+1.  **Local file system** such as code or an artificat stored locally on your development environment
 
 As perviously discussed, Cody is storying the source code for the Spring Pet Clinic on [Github](https://github.com/ryan-a-baker/spring-petclinic/tree/1.0.), and a `1.0.0` version has already been created.  When using a Git Repo such as GitHub, TBS has a few options on how to reference the code we want to build.
 
-1.  A branch, such as "main".  When using a branch as your source, any commit to that branch will automatically trigger a new image build once TBS detects the new commit.
-2.  A speficic commit SHA.  This is what VMware typically recommends when using [TBS in a CI/CD pipeline](https://docs.pivotal.io/build-service/1-2/tbs-in-ci.html).  When ready to build a new image, the `kp image patch` or `kp image save` command can be used to update to the desired SHA.
-3.  A tag, such as the `1.0.0` version that we're going to use in this workshop.
+1.  A **branch**, such as "main".  When using a branch as your source, any commit to that branch will automatically trigger a new image build once TBS detects the new commit.
+2.  A **speficic commit SHA**.  This is what VMware typically recommends when using [TBS in a CI/CD pipeline](https://docs.pivotal.io/build-service/1-2/tbs-in-ci.html).  When ready to build a new image, the `kp image patch` or `kp image save` command can be used to update to the desired SHA.
+3.  A **tag**, such as the `1.0.0` version that we're going to use in this workshop.
 
 In order to keep the external dependencies simple and prevent the requirement of a GitHub account for this workshop, we're going to use the `1.0.0` tag that was already created for the Spring Pet Clinic.  
 
