@@ -6,7 +6,7 @@ In order to successfully complete this workshop, we'll need the following resour
 
 ## Harbor
 
-Use the following link to sign into the Harbor Web UI with the username "admin" and password "{{ ENV_HARBOR_PASSWORD }}". (You will be redirected to the sign-in page)
+Use the following link to sign into the Harbor Web UI with the username "admin" and password "Harbor12345" {{ ENV_HARBOR_PASSWORD }}. (You will be redirected to the sign-in page)
 
 ```dashboard:create-dashboard
 name: Harbor
