@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
 
-docker login harbor-demo.$INGRESS_DOMAIN -u admin -p Harbor12345
+docker login harbor.$INGRESS_DOMAIN -u admin -p Harbor12345
 # TODO:  Remove plaintext password
 
 set +e
