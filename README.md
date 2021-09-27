@@ -80,7 +80,35 @@ kp clusterstack update demo-stack --build-image registry.pivotal.io/tanzu-base-b
 kp clusterbuilder create demo-cluster-builder --order ./full-order-100.0.18.yaml --stack demo-stack --store default
 
 
-Create Synced Secret:
+
+# Fresh Install
+
+To install this workshop on a fresh cluster, we need to install the configurations for:
+
+## Metadatacontrollers
+
+Use YTT to install these controllers
+
 ```
-k apply -f secret.yaml -n build-service
+cd install/workshop 
+./install-metacontrollers.sh ../../values.yaml
 ```
+
+# Tanzu Build Service
+
+Install Tanzu Build Service according to the install directions
+
+# Import Dependencies
+
+In order to set this up to work with the demo, first we'll import the latest descriptor from the Tanzu Network:
+
+https://network.pivotal.io/products/tbs-dependencies/
+
+Then - in order to create the "outdated" image, we'll import the outdated build service
+
+```
+kp import -f descriptor-demo.yaml
+```
+
+
+
