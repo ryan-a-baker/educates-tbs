@@ -7,8 +7,8 @@ spec:
   description: An overview of how the Tanzu Build Service can help you get from source code to containers in a repeatable and secure manner.
   vendor: eduk8s.io
   difficulty: beginner
-  duration: 15m
-  url: https://github.com/eduk8s/lab-markdown-sample
+  duration: 45m
+  url: github.com/ryan-a-baker/educates-tbs
   environment:
     objects:
     - apiVersion: rbac.authorization.k8s.io/v1
