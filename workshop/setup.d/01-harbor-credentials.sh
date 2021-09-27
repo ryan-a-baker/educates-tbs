@@ -2,7 +2,7 @@
 set -x
 
 docker login harbor-demo.$INGRESS_DOMAIN -u admin -p Harbor12345
-TODO:  Remove plaintext password
+# TODO:  Remove plaintext password
 
 set +e
 echo Checking for harbor-creds
