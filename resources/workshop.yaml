@@ -28,7 +28,7 @@ spec:
         value: changeme
   content:
     files: github.com/ryan-a-baker/educates-tbs
-    image: harbor-educates.ryanbaker.io/library/tbs-educates@sha256:5a1d47c68f1ea938d4ebacbabf34943814e1db3a2fc78475c997fc34d023ba1d
+    image: theryanbaker/tbs-educates:latest
   session:
     namespaces:
       budget: x-large
