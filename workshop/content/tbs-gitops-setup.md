@@ -11,7 +11,9 @@ name: Harbor
 url: https://harbor.{{ ingress_domain }}/harbor/projects/{{ harbor_project_id }}/repositories
 ```
 
-The workshop will use some terms that it may be beneficial to be used to.  Quickly review these terms:
+The Tanzu build service has several resources that will be discussed during this workshop that work together to produce container images.  Before getting started, it may help to review the diagram and terms of these resources for background information.
+
+![TBS Resources](images/tbs-resources.png)
 
 **Image**: Defines the source of the application, build time environment and registry destination. This source code could reside in git, a blobstore, or as code on a workstation.
 
@@ -22,3 +24,6 @@ The workshop will use some terms that it may be beneficial to be used to.  Quick
 **ClusterStore**: ClusterStore serves as a repository for Cloud Native Buildpacks available for use in Builders. One can populate a store with Buildpacks they create and package.
 
 **ClusterStack**: A ClusterStack defines a pair of build and run OS images. Critical security vulnerabilities are addressed by building apps on the most up-to date stack. The stacks used by Build Service to build applications are referenced in the Builders.
+
+A visual representation will help understand how all the resources work together for the Tanzu Build Service.
+
