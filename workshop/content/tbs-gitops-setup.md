@@ -10,5 +10,5 @@ Use the following link to sign into the Harbor Web UI with the username "admin" 
 
 ```dashboard:create-dashboard
 name: Harbor
-url: https://harbor-demo.{{ ingress_domain }}/harbor/projects/{{ harbor_project_id }}/repositories
+url: https://harbor.{{ ingress_domain }}/harbor/projects/{{ harbor_project_id }}/repositories
 ```
