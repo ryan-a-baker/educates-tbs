@@ -7,16 +7,16 @@ name: Harbor
 url: https://harbor.{{ ingress_domain }}/harbor/projects/{{ harbor_project_id }}/repositories
 ```
 
-We can see that Tanzu Build Service has created multiple container images for the Spring Pet Clinic builds. Click on the image name.
+We can see that Tanzu Build Service has created multiple container images for the Spring Pet Clinic builds. Click on the image name (tanzu-build-service-overview-****/spring-petclinic).
 
-Out of the box, Harbor contains the open source vulnerability scanner **Trivy**, which allows you to scan container images that have been uploaded to your registry, either on a manual or automated basis.  Let's scan the latest image we just created for vulnerabilities.  Check the box next to the latest artifact (sha256:....), and click the "Scan" button.  
+Out of the box, Harbor contains the open source vulnerability scanner **Trivy**, which allows you to scan container images that have been uploaded to your registry, either on a manual or automated basis.  For the workshop project, we have set it up to scan automatically.  
 
-After a few seconds, the scan will complete.  Surprise!  When we built the initial Spring Pet Clinic images, we were initially using an outdated base operating system that has vulnerabilities on it.
+Surprise!  When we built the initial Spring Pet Clinic images, we were initially using an outdated base operating system that has vulnerabilities on it.
 
-Let's take a bit deeper look at our scan results.  Hover over the "X Total" count in the Vulnerabilities columns to see an overview of the security scan results. 
+Let's take a bit deeper look at our scan results.  Hover over the "X Total" count in the Vulnerabilities columns to see an overview of the security scan results.
 
-Next, click on one of the `sha256:....` links, and scroll down to show the CVE list for that image.  Open up a CVE and you can view the description, as well as click on the CVE link itself to view a report on the CVE.
+Next, click on one of the `sha256:....` links, and scroll down to show the CVE list for that image.  Expand a CVE and you can view the description, as well as click on the CVE link itself to view a report on the CVE.
 
-Now, scroll back up to the top of the page, click on the project name (tanzu-build-service-overview-...) and go to the "configuration" tab in the top-level menu.  Notice that there is an "Automatically scan images on push" checkbox, as well as a "Prevent vulnerable images from running" options.  These two features together allows Alana to block images from being pulled that have a certain level of severity of CVE.
+Now, scroll back up to the top of the page, click on the project name (tanzu-build-service-overview-...) and go to the "configuration" tab in the top-level menu (it may be under '...').  Notice that there is an "Automatically scan images on push" checkbox, as well as a "Prevent vulnerable images from running" options.  These two features together allows Alana to block images from being pulled that have a certain level of severity of CVE, protecting her environments.
 
 Now that we've discovered the vulnerabilities, let's discover how the Tanzu Build Service can help ensure that vulnerabilities are remediated automatically.
