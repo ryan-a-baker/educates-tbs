@@ -9,7 +9,7 @@ command: kp image save spring-petclinic --git-revision 1.0.1
 session: 1
 ```
 
-Keep in mind, if we would have used a branch as our **git-revision**, the Tanzu Build Service would automatically detect a commit and trigger a build.  However, in order to keep the external dependencies to a minumum and not require a GitHub account for this workshop, we used a tag to build the initial application.  While we are doing this manually, this could also easily be done as part of CI/CD pipeline.  An example of doing so is outlined in [documentation](https://docs.pivotal.io/build-service/1-2/tbs-in-ci.html).
+Keep in mind, if we would have used a branch as our **git-revision**, the Tanzu Build Service would automatically detect a commit and trigger a build.  However, in order to keep the external dependencies to a minumum and not require a GitHub account for this workshop, we used a tag to build the initial application.  While we are updating this tag manually, this could also easily be done as part of CI/CD pipeline.  An example of doing so is outlined in [documentation](https://docs.pivotal.io/build-service/1-2/tbs-in-ci.html).
 
 Now that we've updated the revision to `1.0.1`, let's look at the build logs and compare the differences:
 

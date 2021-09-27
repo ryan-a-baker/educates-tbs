@@ -7,22 +7,15 @@ name: Harbor
 url: https://harbor.{{ ingress_domain }}/harbor/projects/{{ harbor_project_id }}/repositories
 ```
 
-```dashboard:reload-dashboard
-name: Harbor
-url: https://harbor-demo.{{ ingress_domain }}/harbor/projects/75/repositories
-```
-
 We can see that Tanzu Build Service has created multiple container images for the Spring Pet Clinic builds. Click on the image name.
 
 Out of the box, Harbor contains the open source vulnerability scanner **Trivy**, which allows you to scan container images that have been uploaded to your registry, either on a manual or automated basis.  Let's scan the latest image we just created for vulnerabilities.  Check the box next to the latest artifact (sha256:....), and click the "Scan" button.  
 
-After a few seconds, the scan will complete.  Surprise!  When we built the initial Spring Pet Clinic images, we were intintially used an outdated base operating system that has vulnerabilities on it.
-
-We have multiple options to mitigate this risks.  Out of the box, Harbor has the ability to prevent 
+After a few seconds, the scan will complete.  Surprise!  When we built the initial Spring Pet Clinic images, we were initially using an outdated base operating system that has vulnerabilities on it.
 
 Let's take a bit deeper look at our scan results.  Hover over the "X Total" count in the Vulnerabilities columns to see an overview of the security scan results. 
 
-Next, click on one of the `sha256:....` links, and scroll down to show the CVE list for that image.  Open up a CVE and and you can view the description, as well as click on the CVE link itself to view a report on the CVE.
+Next, click on one of the `sha256:....` links, and scroll down to show the CVE list for that image.  Open up a CVE and you can view the description, as well as click on the CVE link itself to view a report on the CVE.
 
 Now, scroll back up to the top of the page, click on the project name (tanzu-build-service-overview-...) and go to the "configuration" tab in the top-level menu.  Notice that there is an "Automatically scan images on push" checkbox, as well as a "Prevent vulnerable images from running" options.  These two features together allows Alana to block images from being pulled that have a certain level of severity of CVE.
 
