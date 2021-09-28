@@ -9,9 +9,14 @@ data:
     import sys
 
     class Controller(BaseHTTPRequestHandler):
+      # print("Debug")
+      # print([object])
       def sync(self, object, finalizing):
         try:
           projectId = object['status']['projectid']
+          print(object['status'])
+          print("ProjectID")
+          print(projectId)
         except KeyError:
           projectId = None
         if finalizing:
@@ -41,7 +46,14 @@ data:
           print(str.format("* Updating status for {}/{}: {}", object["metadata"]["namespace"], object["metadata"]["name"],returnVal))
           return returnVal
         else:
-          print("Project id found, skipping")
+          print("Project id found, skipping creation but adding user")
+          userAndPass = base64.encodestring(('%s:%s' % (os.environ['HARBOR_USERNAME'], os.environ['HARBOR_PASSWORD'])).replace('\n', '')).replace('\n', '')
+          headers = { "Authorization": "Basic %s" % userAndPass, "Content-Type": "application/json", "Accept": "application/json" }
+          print("Making harbor request")
+          conn=httplib.HTTPSConnection(os.environ['HARBOR_HOST'].replace('\n', ''))
+          conn.request("POST", "/api/v2.0/projects/" + projectId + "/members", json.dumps({"role_id": 2, "member_user": {"username": "tbs-workshop"}}), headers)
+          conn.close()
+          print(projectId)
           return {}
 
       def do_delete_project(self, object, projectId):
@@ -114,10 +126,13 @@ data:
 
       def do_POST(self):
         print("Start Post")
+        # content_length = int(self.headers['Content-Length']) # <--- Gets the size of data
+        # post_data = self.rfile.read(content_length) # <--- Gets the data itself
+        # print(post_data)
         # Serve the sync() function as a JSON webhook.
         observed = json.loads(self.rfile.read(int(self.headers.getheader("content-length"))))
+        # print(json.dumps(observed, indent=4, sort_keys=True))
         desired = self.sync(observed["object"], observed.get("finalizing", False))
-
         self.send_response(200)
         self.send_header("Content-type", "application/json")
         self.end_headers()
@@ -127,7 +142,7 @@ data:
     HTTPServer(("", 80), Controller).serve_forever()
 kind: ConfigMap
 metadata:
-  name: harbor-project-controller
+  name: harbor-project-controller-ver-1
   namespace: harbor-project-controller
   annotations:
     kapp.k14s.io/versioned: ""

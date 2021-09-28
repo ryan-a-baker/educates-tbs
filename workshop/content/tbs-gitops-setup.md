@@ -4,7 +4,7 @@ We're going to take a sample application, use the Tanzu Build Service to build a
 
 In the process of the workshop, we'll use Harbor to look at the container image that Harbor produced.  
 
-Prior to starting the workshop, use the following link to sign into the Harbor Web UI with the username "admin" and password "Harbor12345" {{ ENV_HARBOR_PASSWORD }}.
+Prior to starting the workshop, use the following link to sign into the Harbor Web UI with the username "tbs-workshop" and password "Harbor12345".
 
 ```dashboard:create-dashboard
 name: Harbor
