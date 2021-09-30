@@ -22,10 +22,6 @@ spec:
       - apiGroups: [""]
         resources: ["persistentvolumes"]
         verbs: [ list, watch, get ]
-  session:
-    env:
-      - name: ENV_HARBOR_PASSWORD
-        value: changeme
   content:
     files: github.com/ryan-a-baker/educates-tbs
     image: theryanbaker/tbs-educates:latest
