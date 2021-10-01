@@ -3,22 +3,14 @@ kind: DependencyDescriptor
 clusterStacks:
 - name: demo-stack
   buildImage:
-    image: registry.pivotal.io/tanzu-base-bionic-stack/build@sha256:49ef507c9db9160a3dea0d07eb0649fe6b6f2a49561729a6e010718d4a978293
+    image: harbor.ryanbaker.io/educates-demo-stack/build-demo-stack:latest
   runImage:
-    image: registry.pivotal.io/tanzu-base-bionic-stack/run@sha256:8ee09c6154a8c9a99f5da07c317102f5c29ad9b1bf2b7742799eb51d9f1a2e56
+    image: harbor.ryanbaker.io/educates-demo-stack/run-demo-stack:latest
 clusterBuilders:
 - name: demo-cluster-builder
   clusterStack: demo-stack
   clusterStore: default
   order:
-  - group:
-    - id: tanzu-buildpacks/dotnet-core
-  - group:
-    - id: tanzu-buildpacks/nodejs
-  - group:
-    - id: tanzu-buildpacks/go
-  - group:
-    - id: tanzu-buildpacks/python
   - group:
     - id: tanzu-buildpacks/nginx
   - group:
