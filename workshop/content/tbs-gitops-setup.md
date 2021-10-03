@@ -15,12 +15,12 @@ The Tanzu build service has several resources that will be discussed during this
 
 ![TBS Resources](exercises/images/tbs-resources.png)
 
-**Image**: Defines the source of the application, build time environment and registry destination. This source code could reside in git, a blobstore, or as code on a workstation.
+**Image**: Defines the source of the application, build time environment and registry destination. This source code could reside in git, a blobstore, or as code on a workstation. Any change to the configuration of an image will automatically trigger an image rebuild to ensure the latest image is in the desired state.
 
 **BuildPack**: Provide framework and runtime support for apps. Buildpacks typically examine your apps to determine what dependencies to download and how to configure the apps to communicate with bound services
-
-**ClusterBuilder**: References the Stack and Buildpacks that are used in the process of building source code. They “provide” the Buildpacks that run against the application and the OS images upon which the application is built and run.
 
 **ClusterStore**: ClusterStore serves as a repository for Cloud Native Buildpacks available for use in Builders. One can populate a store with Buildpacks they create and package.
 
 **ClusterStack**: A ClusterStack defines a pair of build and run OS images. Critical security vulnerabilities are addressed by building apps on the most up-to date stack. The stacks used by Build Service to build applications are referenced in the Builders.
+
+**ClusterBuilder**: References the Stack and Buildpacks that are used in the process of building source code. They “provide” the Buildpacks that run against the application and the OS images upon which the application is built and run.
