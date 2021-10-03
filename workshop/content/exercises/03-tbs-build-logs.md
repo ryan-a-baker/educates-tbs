@@ -5,7 +5,7 @@ command: kp build logs spring-petclinic
 session: 1
 ```
 
-The build will go through 6 phases on an initial build:
+The build will follow the [Cloud Native Buildpacks lifecycle](https://buildpacks.io/docs/concepts/components/lifecycle/), which will go through 6 phases on an initial build:
 
 1. **Prepare**: This is where TBS identifies that a change was made, loads any secrets (for the registry to push the completed image to as well as any source code location secrets), and downloads the source code for image creation.
 2. **Detect**: TBS executes all of the available build packs against the source code, looking for matching signatures in the source code from the buildpacks to determine if the build pack should be executed.

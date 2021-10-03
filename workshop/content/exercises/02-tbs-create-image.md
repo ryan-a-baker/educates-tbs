@@ -8,7 +8,7 @@ Alana's secret weapon is Tanzu Build Service (TBS). TBS enables a clear separati
 
 ![Tanzu Build Service](images/tanzu-build-service.png)
 
-Let's see how this works. With Tanzu Build Service, we will create an **image**. This is a mapping of Cody's source repo (or the application artifact produced by Cody's CI pipeline) to a container image in our Docker registry. Remember that the artifact Cody does not have to contain a dockerfile, does does Alana have to produce one.  The Tanzu build service will analyze the source code against the available build packs, and build the layers of the image using years of community best practice standards from the build packs that match Cody's source code.
+Let's see how this works. With Tanzu Build Service, we will create an **image**. This is a mapping of Cody's source repo (or the application artifact produced by Cody's CI pipeline) to a container image in our Docker registry. Remember that niether Cody or Alana have to develop a dockerfile for the application. The Tanzu build service will analyze the source code against the available build packs, and build the layers of the image using years of community best practice standards from the build packs that match Cody's source code.
 
 When you create an image with TBS, you have a few options on where the source code can be referenced:
 
@@ -16,7 +16,7 @@ When you create an image with TBS, you have a few options on where the source co
 1.  **Blob storage** such as S3 if a CI pipeline (or other means) is building the artifact
 1.  **Local file system** such as code or an artificat stored locally on your development environment
 
-As perviously discussed, Cody is storying the source code for the Spring Pet Clinic on [Github](https://github.com/ryan-a-baker/spring-petclinic/tree/1.0.), and a `1.0.0` version has already been created.  When using a Git Repo such as GitHub, TBS has a few options on how to reference the code we want to build.
+As previously discussed, Cody is storying the source code for the Spring Pet Clinic on [Github](https://github.com/ryan-a-baker/spring-petclinic/tree/1.0.), and a `1.0.0` version has already been created.  When using a Git Repo such as GitHub, TBS has a few options on how to reference the code we want to build.
 
 1.  A **branch**, such as "main".  When using a branch as your source, any commit to that branch will automatically trigger a new image build once TBS detects the new commit.
 2.  A **speficic commit SHA**.  This is what VMware typically recommends when using [TBS in a CI/CD pipeline](https://docs.pivotal.io/build-service/1-2/tbs-in-ci.html).  When ready to build a new image, the `kp image patch` or `kp image save` command can be used to update to the desired SHA.
