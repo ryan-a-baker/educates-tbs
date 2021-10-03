@@ -31,5 +31,5 @@ Once the pod returns to a running state, the welcome message should be updated t
 
 ```dashboard:reload-dashboard
 name: Spring Pet Clinic
-url: http://spring-petclinic.{{ session_namespace }}.{{ ingress_domain }}
+url: http://spring-petclinic.{{ session_namespace }}.ryanbaker.io
 ```

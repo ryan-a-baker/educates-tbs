@@ -26,12 +26,12 @@ Let's open the Spring Pet Clinic application to verify it is functional.
 
 ```dashboard:create-dashboard
 name: Spring Pet Clinic
-url: http://spring-petclinic.{{ session_namespace }}.{{ ingress_domain }}
+url: http://spring-petclinic.{{ session_namespace }}.ryanbaker.io
 ```
 
 Note that the ingress is creating a DNS record, which may take a few minutes to propagate.  You may need to reload the dashboard if the DNS record was not yet available.
 
 ```dashboard:reload-dashboard
 name: Spring Pet Clinic
-url: http://spring-petclinic.{{ session_namespace }}.{{ ingress_domain }}
+url: http://spring-petclinic.{{ session_namespace }}.ryanbaker.io
 ```

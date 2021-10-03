@@ -55,3 +55,5 @@ spec:
     app: controller
   ports:
   - port: 80
+    protocol: TCP
+    targetPort: 8080
